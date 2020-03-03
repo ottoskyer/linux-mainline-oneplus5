@@ -779,8 +779,11 @@ CONFIG_ARCH_HAS_RELR=y
 CONFIG_ARCH_HAS_GCOV_PROFILE_ALL=y
 # end of GCOV-based kernel profiling
 
-CONFIG_PLUGIN_HOSTCC=""
+CONFIG_PLUGIN_HOSTCC="g++"
 CONFIG_HAVE_GCC_PLUGINS=y
+CONFIG_GCC_PLUGINS=y
+# CONFIG_GCC_PLUGIN_LATENT_ENTROPY is not set
+# CONFIG_GCC_PLUGIN_RANDSTRUCT is not set
 # end of General architecture-dependent options
 
 CONFIG_RT_MUTEXES=y
@@ -4560,7 +4563,7 @@ CONFIG_XEN_FBDEV_FRONTEND=y
 # CONFIG_FB_METRONOME is not set
 # CONFIG_FB_MB862XX is not set
 CONFIG_FB_MX3=y
-# CONFIG_FB_SIMPLE is not set
+CONFIG_FB_SIMPLE=y
 # CONFIG_FB_SSD1307 is not set
 # CONFIG_FB_SM712 is not set
 # end of Frame buffer Devices
@@ -7362,6 +7365,10 @@ CONFIG_LSM="lockdown,yama,loadpin,safesetid,integrity"
 # Memory initialization
 #
 CONFIG_INIT_STACK_NONE=y
+# CONFIG_GCC_PLUGIN_STRUCTLEAK_USER is not set
+# CONFIG_GCC_PLUGIN_STRUCTLEAK_BYREF is not set
+# CONFIG_GCC_PLUGIN_STRUCTLEAK_BYREF_ALL is not set
+# CONFIG_GCC_PLUGIN_STACKLEAK is not set
 # CONFIG_INIT_ON_ALLOC_DEFAULT_ON is not set
 # CONFIG_INIT_ON_FREE_DEFAULT_ON is not set
 # end of Memory initialization
