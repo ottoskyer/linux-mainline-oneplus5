@@ -20,6 +20,7 @@
 
 		//stdout-path = "serial0:115200n8";
 		stdout-path = "display0";
+		bootargs = "earlycon clk_ignore_unused";
 
 		/*
 		 * hack: Use framebuffer setup by the bootloader.
