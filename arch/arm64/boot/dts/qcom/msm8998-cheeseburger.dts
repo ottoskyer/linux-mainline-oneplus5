@@ -21,6 +21,9 @@
 
 	chosen {
 		stdout-path = "serial0:115200n8";
+
+		/* Without "clk_ignore_unused" the kernel panics early */
+		bootargs = "earlycon clk_ignore_unused";
 	};
 
 	vph_pwr: vph-pwr-regulator {
