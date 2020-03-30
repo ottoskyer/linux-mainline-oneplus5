@@ -139,13 +139,6 @@
 	};
 };
 
-&qusb2phy {
-	status = "okay";
-
-	vdda-pll-supply = <&vreg_l12a_1p8>;
-	vdda-phy-dpdm-supply = <&vreg_l24a_3p075>;
-};
-
 &rpm_requests {
 	pm8998-regulators {
 		compatible = "qcom,rpm-pm8998-regulators";
@@ -424,6 +417,10 @@
 	vddp-ref-clk-always-on;
 };
 
+&pcie0 {
+	status = "disabled";
+};
+
 &usb3 {
 	status = "okay";
 };
@@ -439,8 +436,11 @@
 	vdda-pll-supply = <&vreg_l2a_1p2>;
 };
 
-&pcie0 {
-	status = "disabled";
+&qusb2phy {
+	status = "okay";
+
+	vdda-pll-supply = <&vreg_l12a_1p8>;
+	vdda-phy-dpdm-supply = <&vreg_l24a_3p075>;
 };
 
 &wifi {
